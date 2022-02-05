@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagligimBlog", "SagligimBlog\SagligimBlog.csproj", "{EA961F94-CE54-444C-A358-CE943D841779}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{A0D81255-DD6B-447D-ABBE-B97595D5F2D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EA961F94-CE54-444C-A358-CE943D841779}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA961F94-CE54-444C-A358-CE943D841779}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA961F94-CE54-444C-A358-CE943D841779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0D81255-DD6B-447D-ABBE-B97595D5F2D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D81255-DD6B-447D-ABBE-B97595D5F2D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D81255-DD6B-447D-ABBE-B97595D5F2D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D81255-DD6B-447D-ABBE-B97595D5F2D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

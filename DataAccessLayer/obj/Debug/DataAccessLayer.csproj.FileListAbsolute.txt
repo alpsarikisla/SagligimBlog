@@ -1,0 +1,6 @@
+C:\Users\Alp\Documents\GitHub\SagligimBlog\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Alp\Documents\GitHub\SagligimBlog\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Alp\Documents\GitHub\SagligimBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Alp\Documents\GitHub\SagligimBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Alp\Documents\GitHub\SagligimBlog\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Alp\Documents\GitHub\SagligimBlog\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

@@ -1,0 +1,46 @@
+﻿h1,h2,h3,h4,h5,h6
+{
+    margin:0px;
+    padding:0px;
+}
+body {
+    color: dimgray;
+    font-family:Calibri;
+}
+.FormContainer {
+    width: 400px;
+    min-height: 300px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin: 0px auto;
+    margin-top: 300px;
+}
+.FormBaslik {
+    background-color: #dedede;
+    color: gray;
+    text-align: center;
+    padding: 20px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.metinKutu {
+    width: 340px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius:5px;
+    border:1px solid silver;
+}
+.contentcontainer 
+{
+    padding: 20px;
+}
+.hatamesaj
+{
+    background-color:#fbbcbc;
+    color:darkred;
+    border:1px solid darkred;
+    padding:15px;
+    border-radius:7px;
+    margin-bottom:20px;
+}
+
