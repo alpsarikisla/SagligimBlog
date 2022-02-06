@@ -1,0 +1,60 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Calibri;
+}
+
+.menuBar {
+    height: 70px;
+    background-color: cadetblue;
+}
+
+.logo {
+    padding-top: 20px;
+    padding-left: 20px;
+    color: white;
+    float: left;
+}
+
+.user {
+    padding-top: 20px;
+    padding-right: 50px;
+    color: white;
+    float: right;
+}
+.user a
+{
+    color:white;
+    text-decoration:none;
+}
+.solMenu
+{
+    width:250px;
+    background-color:#dedede;
+    height:780px;
+    float:left;
+}
+.menu
+{
+    list-style-type:none;
+}
+    .menu a {
+        color: teal;
+        text-decoration: none;
+    }
+        .menu a li {
+            padding: 7px;
+            padding-left: 20px;
+            border-bottom: 1px solid silver;
+        }
+    .menu a:hover li {
+        background-color:#cfcfcf;
+    }
+.icerik{
+    width:900px;
+    float:left;
+    padding:25px;
+}

@@ -27,6 +27,7 @@ namespace SagligimBlog.Yonetici
                 DataAccessLayer.Yonetici y = db.YoneticiGiris(mail, sifre);
                 if (y != null)
                 {
+                    Session["yonetici"] = y;//boxing işlemi yapar
                     Response.Redirect("Default.aspx");
                 }
                 else
