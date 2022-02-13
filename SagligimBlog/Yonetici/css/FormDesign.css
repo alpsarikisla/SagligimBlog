@@ -1,0 +1,113 @@
+﻿.formContainer {
+    min-height: 350px;
+    border: 1px solid Silver;
+    border-radius: 7px;
+}
+
+.formtitle {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: #ededed;
+    padding: 20px;
+}
+
+.formContent {
+    padding: 20px;
+}
+
+.row {
+    padding: 10px 0;
+}
+
+    .row label {
+    }
+
+    .row .formInput {
+        border: 1px solid silver;
+        border-radius: 5px;
+        padding: 10px;
+        width: 500px;
+        margin-top: 15px;
+    }
+
+        .row .formInput:focus {
+            outline: 1px solid teal;
+        }
+
+    .row .formButton {
+        padding: 7px 25px;
+        background-color: cadetblue;
+        border-radius: 3px;
+        color: white;
+        text-decoration: none;
+    }
+
+        .row .formButton:hover {
+            background-color: teal;
+        }
+
+.basariliMesaj {
+    padding: 20px;
+    border: 1px solid #098313;
+    background-color: #c8ffbb;
+    color: #098313;
+    border-radius: 7px;
+}
+
+.basarisizMesaj {
+    padding: 20px;
+    border: 1px solid #890909;
+    background-color: #ffbcbc;
+    color: #890909;
+    border-radius: 7px;
+}
+
+.listTable {
+    width: 100%;
+    border-top: 1px solid silver;
+}
+
+    .listTable tr th {
+        border-bottom: 3px solid gray;
+        padding: 15px 10px;
+        background-color: #f1f1f1;
+        text-align: left;
+        border-right: 1px solid silver;
+    }
+
+    .listTable tr td {
+        border-bottom: 1px solid silver;
+        padding: 15px 10px;
+    }
+
+.contenttable {
+    padding: 0px !important;
+}
+
+.tablebutton {
+    padding: 3px 7px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.update {
+    background-color: #93c7ff;
+    border: 1px solid #063a8e;
+    color: #063a8e;
+}
+
+    .update:hover {
+        background-color: #063a8e;
+        color: white;
+    }
+
+.delete {
+    background-color: #ffbcbc;
+    border: 1px solid darkred;
+    color: darkred;
+}
+
+    .delete:hover {
+        background-color: darkred;
+        color: white;
+    }

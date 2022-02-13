@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="Yonetici\css\adminlayout.css" />
+    <Content Include="Yonetici\css\FormDesign.css" />
     <Content Include="Yonetici\css\YoneticiGiris.css" />
     <Content Include="Yonetici\Default.aspx" />
     <Content Include="Yonetici\Giris.aspx" />
@@ -96,6 +97,20 @@
     <Compile Include="Yonetici\KategoriEkle.aspx.designer.cs">
       <DependentUpon>KategoriEkle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Yonetici\KategoriListeleGridView.aspx.cs">
+      <DependentUpon>KategoriListeleGridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\KategoriListeleGridView.aspx.designer.cs">
+      <DependentUpon>KategoriListeleGridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\KategoriListeleListView.aspx.cs">
+      <DependentUpon>KategoriListeleListView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\KategoriListeleListView.aspx.designer.cs">
+      <DependentUpon>KategoriListeleListView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Yonetici\Yonetici.Master.cs">
       <DependentUpon>Yonetici.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,6 +128,8 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="Yonetici\KategoriEkle.aspx" />
+    <Content Include="Yonetici\KategoriListeleGridView.aspx" />
+    <Content Include="Yonetici\KategoriListeleListView.aspx" />
     <Content Include="Yonetici\Yonetici.Master" />
   </ItemGroup>
   <ItemGroup>

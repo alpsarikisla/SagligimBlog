@@ -28,8 +28,11 @@
                             <li>Anasayfa</li>
                         </a>
                         
-                        <a href="#">
-                            <li>Kategoriler</li>
+                        <a href="KategoriListeleGridView.aspx">
+                            <li>Kategoriler Grid</li>
+                        </a>
+                           <a href="KategoriListeleListView.aspx">
+                            <li>Kategoriler ListView</li>
                         </a>
                         <a href="KategoriEkle.aspx">
                             <li>Kategori Ekle</li>
