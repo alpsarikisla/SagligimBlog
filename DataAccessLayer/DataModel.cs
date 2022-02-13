@@ -120,6 +120,81 @@ namespace DataAccessLayer
             }
         }
 
+        public bool KategoriSil(int id)
+        {
+            try
+            {
+                cmd.CommandText = "DELETE FROM Kategoriler WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public Kategori KategoriGetir(int id)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT ID, Isim FROM Kategoriler WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                Kategori k = new Kategori();
+
+                while (reader.Read())
+                {
+                    k.ID = reader.GetInt32(0);
+                    k.Isim = reader.GetString(1);
+                }
+                return k;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public bool KategoriGuncelle(Kategori k)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Kategoriler SET Isim = @i WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@i", k.Isim);
+                cmd.Parameters.AddWithValue("@id", k.ID);
+                con.Open();
+
+                cmd.ExecuteNonQuery();
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         #endregion
     }
 }

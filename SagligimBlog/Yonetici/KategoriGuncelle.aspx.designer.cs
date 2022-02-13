@@ -11,8 +11,17 @@ namespace SagligimBlog.Yonetici
 {
 
 
-    public partial class KategoriListeleListView
+    public partial class KategoriGuncelle
     {
+
+        /// <summary>
+        /// pnl_basarili control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnl_basarili;
 
         /// <summary>
         /// pnl_basarisiz control.
@@ -33,12 +42,30 @@ namespace SagligimBlog.Yonetici
         protected global::System.Web.UI.WebControls.Label lbl_mesaj;
 
         /// <summary>
-        /// lv_kategoriler control.
+        /// tb_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lv_kategoriler;
+        protected global::System.Web.UI.WebControls.TextBox tb_ID;
+
+        /// <summary>
+        /// tb_isim control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_isim;
+
+        /// <summary>
+        /// lbtn_ekle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_ekle;
     }
 }

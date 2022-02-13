@@ -16,5 +16,20 @@ namespace SagligimBlog.Yonetici
             lv_kategoriler.DataSource = dm.KategoriListele();
             lv_kategoriler.DataBind();
         }
+
+        protected void lv_kategoriler_ItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            if (e.CommandName == "sil")
+            {
+                int id = Convert.ToInt32(e.CommandArgument);
+                if (!dm.KategoriSil(id))
+                {
+                    pnl_basarisiz.Visible = true;
+                    lbl_mesaj.Text = "Kategori silinirken bir hata oluştu";
+                }
+            }
+            lv_kategoriler.DataSource = dm.KategoriListele();
+            lv_kategoriler.DataBind();
+        }
     }
 }

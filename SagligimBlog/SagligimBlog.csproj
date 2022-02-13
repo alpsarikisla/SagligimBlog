@@ -97,6 +97,13 @@
     <Compile Include="Yonetici\KategoriEkle.aspx.designer.cs">
       <DependentUpon>KategoriEkle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Yonetici\KategoriGuncelle.aspx.cs">
+      <DependentUpon>KategoriGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\KategoriGuncelle.aspx.designer.cs">
+      <DependentUpon>KategoriGuncelle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Yonetici\KategoriListeleGridView.aspx.cs">
       <DependentUpon>KategoriListeleGridView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,6 +135,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="Yonetici\KategoriEkle.aspx" />
+    <Content Include="Yonetici\KategoriGuncelle.aspx" />
     <Content Include="Yonetici\KategoriListeleGridView.aspx" />
     <Content Include="Yonetici\KategoriListeleListView.aspx" />
     <Content Include="Yonetici\Yonetici.Master" />
