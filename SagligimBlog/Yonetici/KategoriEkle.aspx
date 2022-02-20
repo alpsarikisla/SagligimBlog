@@ -17,7 +17,7 @@
             </asp:Panel>
             <div class="row">
                 <label>Kategori Adı</label><br />
-                <asp:TextBox ID="tb_isim" runat="server" CssClass="formInput"></asp:TextBox>
+                <asp:TextBox ID="tb_isim" runat="server" CssClass="formInput" ></asp:TextBox>
             </div>
             <div class="row">
                 <asp:LinkButton ID="lbtn_ekle" runat="server" OnClick="lbtn_ekle_Click" CssClass="formButton">Kategori Ekle</asp:LinkButton>

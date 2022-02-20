@@ -196,5 +196,38 @@ namespace DataAccessLayer
         }
 
         #endregion
+
+        #region Makale Metotları
+
+        public bool MakaleEkle(Makale mak)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Makaleler(KategoriID, YazarID, Baslik, Ozet, Icerik, KapakResim, GoruntulenmeSayisi, EklemeTarihi, Durum) VALUES(@kategoriID, @yazarID, @baslik, @ozet, @icerik, @kapakResim, @goruntulenmeSayisi, @eklemeTarihi, @durum)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@kategoriID", mak.Kategori_ID);
+                cmd.Parameters.AddWithValue("@yazarID", mak.Yazar_ID);
+                cmd.Parameters.AddWithValue("@baslik", mak.Baslik);
+                cmd.Parameters.AddWithValue("@ozet", mak.Ozet);
+                cmd.Parameters.AddWithValue("@icerik", mak.Icerik);
+                cmd.Parameters.AddWithValue("@kapakResim", mak.KapakResim);
+                cmd.Parameters.AddWithValue("@goruntulenmeSayisi", mak.GoruntulemeSayisi);
+                cmd.Parameters.AddWithValue("@eklemeTarihi", mak.EklemeTarih);
+                cmd.Parameters.AddWithValue("@durum", mak.Durum);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        #endregion
     }
 }
