@@ -111,3 +111,12 @@
         background-color: darkred;
         color: white;
     }
+.status {
+    background-color: #c8ffbb;
+    border: 1px solid green;
+    color: green;
+}
+    .status:hover {
+        background-color: green;
+        color: white;
+    }

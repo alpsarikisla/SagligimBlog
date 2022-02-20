@@ -67,6 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MakaleResimleri\16f8ca29-9bd4-42e0-b676-d20be30ae4ad.jpg" />
+    <Content Include="MakaleResimleri\3964961d-b36f-4fb1-92bc-391edf4d2d80.jpg" />
+    <Content Include="MakaleResimleri\494c0ca3-b6cf-4609-a894-d03063539231.jpg" />
+    <Content Include="MakaleResimleri\none.png" />
+    <Content Include="MakaleResimleri\resim.jpg" />
     <Content Include="Web.config" />
     <Content Include="Yonetici\ckeditor\adapters\jquery.js" />
     <Content Include="Yonetici\ckeditor\build-config.js" />
@@ -509,6 +514,20 @@
     <Compile Include="Yonetici\MakaleEkle.aspx.designer.cs">
       <DependentUpon>MakaleEkle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Yonetici\MakaleGuncelle.aspx.cs">
+      <DependentUpon>MakaleGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\MakaleGuncelle.aspx.designer.cs">
+      <DependentUpon>MakaleGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\MakaleListele.aspx.cs">
+      <DependentUpon>MakaleListele.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\MakaleListele.aspx.designer.cs">
+      <DependentUpon>MakaleListele.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Yonetici\Yonetici.Master.cs">
       <DependentUpon>Yonetici.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -530,6 +549,8 @@
     <Content Include="Yonetici\KategoriListeleGridView.aspx" />
     <Content Include="Yonetici\KategoriListeleListView.aspx" />
     <Content Include="Yonetici\MakaleEkle.aspx" />
+    <Content Include="Yonetici\MakaleGuncelle.aspx" />
+    <Content Include="Yonetici\MakaleListele.aspx" />
     <Content Include="Yonetici\Yonetici.Master" />
     <Content Include="Yonetici\ckeditor\bender-runner.config.json" />
     <Content Include="Yonetici\ckeditor\CHANGES.md" />
@@ -554,9 +575,7 @@
       <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MakaleResimleri\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
