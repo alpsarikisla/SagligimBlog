@@ -67,6 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\MainStyle.css" />
+    <Content Include="assets\dedicated\120x600.gif" />
+    <Content Include="assets\dedicated\160x600.gif" />
+    <Content Include="assets\dedicated\250x250.gif" />
+    <Content Include="assets\dedicated\300x250.gif" />
+    <Content Include="assets\dedicated\336x280.gif" />
+    <Content Include="assets\dedicated\468x60.gif" />
+    <Content Include="assets\dedicated\728x90.gif" />
+    <Content Include="assets\Images\sagligim.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="MakaleDetay.aspx" />
     <Content Include="MakaleResimleri\16f8ca29-9bd4-42e0-b676-d20be30ae4ad.jpg" />
     <Content Include="MakaleResimleri\3964961d-b36f-4fb1-92bc-391edf4d2d80.jpg" />
     <Content Include="MakaleResimleri\494c0ca3-b6cf-4609-a894-d03063539231.jpg" />
@@ -464,6 +475,27 @@
     <Content Include="Yonetici\Giris.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakaleDetay.aspx.cs">
+      <DependentUpon>MakaleDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakaleDetay.aspx.designer.cs">
+      <DependentUpon>MakaleDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterPage.Master.cs">
+      <DependentUpon>MaterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterPage.Master.designer.cs">
+      <DependentUpon>MaterPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Yonetici\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -537,6 +569,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MaterPage.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -575,7 +608,9 @@
       <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="MakaleResimleri\Cover\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

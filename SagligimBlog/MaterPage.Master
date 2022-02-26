@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MaterPage.master.cs" Inherits="SagligimBlog.MaterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="assets/css/MainStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="Default.aspx"><img src="assets/Images/sagligim.png" /></a>
+                </div>
+                <div class="user">
+                    <a href="#">Giriş Yap</a>|<a href="#">Kayıt Ol</a>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="menucontainer">
+                <ul>
+                    <a href='Default.aspx'><li>Tümü</li></a>
+                    <asp:Repeater ID="rp_kategoriler" runat="server">
+                        <ItemTemplate>
+                            <a href='Default.aspx?kid=<%# Eval("ID") %>'><li><%# Eval("Isim") %></li></a>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </ul>
+                <br />
+                <a href="https://www.turhost.com/r/104820/" style="margin-left:40px;">
+                    <img src="assets/dedicated/160x600.gif" /></a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

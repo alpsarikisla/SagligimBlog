@@ -267,6 +267,46 @@ namespace DataAccessLayer
             }
         }
 
+        public List<Makale> MakaleListele(int katid)
+        {
+            try
+            {
+                List<Makale> makaleler = new List<Makale>();
+                cmd.CommandText = "SELECT M.ID,M.KategoriID,K.Isim,M.YazarID,Y.Isim+' '+Y.Soyisim,M.Baslik,M.Ozet,M.Icerik,M.KapakResim,M.GoruntulenmeSayisi,M.EklemeTarihi,M.Durum FROM Makaleler AS M JOIN Kategoriler AS K ON K.ID = M.KategoriID JOIN Yoneticiler AS Y ON Y.ID = M.YazarID WHERE M.KategoriID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", katid);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Makale m = new Makale();
+                    m.ID = reader.GetInt32(0);
+                    m.Kategori_ID = reader.GetInt32(1);
+                    m.Kategori = reader.GetString(2);
+                    m.Yazar_ID = reader.GetInt32(3);
+                    m.Yazar = reader.GetString(4);
+                    m.Baslik = reader.GetString(5);
+                    m.Ozet = reader.GetString(6);
+                    m.Icerik = reader.GetString(7);
+                    m.KapakResim = reader.GetString(8);
+                    m.GoruntulemeSayisi = reader.GetInt32(9);
+                    m.EklemeTarih = reader.GetDateTime(10);
+                    m.Durum = reader.GetBoolean(11);
+                    makaleler.Add(m);
+                }
+                return makaleler;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public Makale MakaleGetir(int id)
         {
             try
@@ -380,6 +420,8 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
+
+        
 
         #endregion
     }
