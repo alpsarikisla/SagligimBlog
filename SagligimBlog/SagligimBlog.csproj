@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\FormStyle.css" />
     <Content Include="assets\css\MainStyle.css" />
     <Content Include="assets\dedicated\120x600.gif" />
     <Content Include="assets\dedicated\160x600.gif" />
@@ -75,14 +76,17 @@
     <Content Include="assets\dedicated\336x280.gif" />
     <Content Include="assets\dedicated\468x60.gif" />
     <Content Include="assets\dedicated\728x90.gif" />
+    <Content Include="assets\Images\272354.png" />
     <Content Include="assets\Images\sagligim.png" />
     <Content Include="Default.aspx" />
     <Content Include="MakaleDetay.aspx" />
-    <Content Include="MakaleResimleri\16f8ca29-9bd4-42e0-b676-d20be30ae4ad.jpg" />
-    <Content Include="MakaleResimleri\3964961d-b36f-4fb1-92bc-391edf4d2d80.jpg" />
-    <Content Include="MakaleResimleri\494c0ca3-b6cf-4609-a894-d03063539231.jpg" />
+    <Content Include="MakaleResimleri\394973fb-0bbc-47b6-b498-7e22f1466016.jpg" />
+    <Content Include="MakaleResimleri\51643920-de40-4282-a6a9-c1b15120d306.jpg" />
+    <Content Include="MakaleResimleri\957e1ac9-e28a-4c71-a7d9-94eca448643a.jpg" />
+    <Content Include="MakaleResimleri\a7ed0e0b-d2f7-4648-a17f-9608d69a67d2.jpg" />
     <Content Include="MakaleResimleri\none.png" />
-    <Content Include="MakaleResimleri\resim.jpg" />
+    <Content Include="UyeGiris.aspx" />
+    <Content Include="UyeOl.aspx" />
     <Content Include="Web.config" />
     <Content Include="Yonetici\ckeditor\adapters\jquery.js" />
     <Content Include="Yonetici\ckeditor\build-config.js" />
@@ -497,6 +501,20 @@
       <DependentUpon>MaterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UyeGiris.aspx.cs">
+      <DependentUpon>UyeGiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UyeGiris.aspx.designer.cs">
+      <DependentUpon>UyeGiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UyeOl.aspx.cs">
+      <DependentUpon>UyeOl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UyeOl.aspx.designer.cs">
+      <DependentUpon>UyeOl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Yonetici\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -17,7 +17,12 @@
                     <a href="Default.aspx"><img src="assets/Images/sagligim.png" /></a>
                 </div>
                 <div class="user">
-                    <a href="#">Giriş Yap</a>|<a href="#">Kayıt Ol</a>
+                   <asp:Panel ID="pnlGirisVar" runat="server">
+                       Merhaba: <asp:Label ID="lbl_uye" runat="server"></asp:Label> | <asp:LinkButton ID="lbtn_cikis" runat="server" OnClick="lbtn_cikis_Click">Çıkış Yap</asp:LinkButton>
+                   </asp:Panel>
+                    <asp:Panel ID="pnl_girisyok" runat="server">
+                         <a href="UyeGiris.aspx">Giriş Yap</a>|<a href="UyeOl.aspx">Kayıt Ol</a>
+                    </asp:Panel>
                 </div>
                 <div style="clear: both"></div>
             </div>

@@ -58,3 +58,4 @@ C:\Users\Alp\Documents\GitHub\SagligimBlog\SagligimBlog\obj\Debug\SagligimBlog.d
 C:\Users\Alp\Documents\GitHub\SagligimBlog\SagligimBlog\obj\Debug\SagligimBlog.pdb
 C:\Users\Alp\Documents\GitHub\SagligimBlog\SagligimBlog\bin\DataAccessLayer.dll
 C:\Users\Alp\Documents\GitHub\SagligimBlog\SagligimBlog\bin\DataAccessLayer.pdb
+C:\Users\Alp\Documents\GitHub\SagligimBlog\SagligimBlog\obj\Debug\SagligimBlog.csproj.CopyComplete

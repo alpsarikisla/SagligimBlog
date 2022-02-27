@@ -421,7 +421,191 @@ namespace DataAccessLayer
             }
         }
 
-        
+
+
+        #endregion
+
+        #region Uye Metotları
+
+        public Uye UyeGiris(string mail, string sifre)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT(*) FROM Uyeler WHERE Email=@m AND Sifre=@s";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@m", mail);
+                cmd.Parameters.AddWithValue("@s", sifre);
+                con.Open();
+                int sayi = Convert.ToInt32(cmd.ExecuteScalar());
+
+                if (sayi == 1)
+                {
+                    cmd.CommandText = "SELECT ID, Isim, Soyisim, KullaniciAdi, Email, Sifre, UyelikTarihi, Durum FROM Uyeler WHERE Email=@m AND Sifre=@s";
+                         cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@m", mail);
+                    cmd.Parameters.AddWithValue("@s", sifre);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    Uye u = new Uye();
+                    while (reader.Read())
+                    {
+                        u.ID = reader.GetInt32(0);
+                        u.Isim = reader.GetString(1);
+                        u.Soyad = reader.GetString(2);
+                        u.KullaniciAdi = reader.GetString(3);
+                        u.Mail = reader.GetString(4);
+                        u.Sifre = reader.GetString(5);
+                        u.UyelikTarihi = reader.GetDateTime(6);
+                        u.Durum = reader.GetBoolean(7);
+                    }
+                    return u;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        #endregion
+
+        #region Yorum Metotları
+
+        public List<Yorum> YorumListele()
+        {
+            List<Yorum> yorumlar = new List<Yorum>();
+            try
+            {
+                cmd.CommandText = "SELECT Y.ID, Y.UyeID, U.KullaniciAdi, Y.MakaleID, M.Baslik, Y.Icerik, Y.YorumTarihi, Y.OnayDurum FROM Yorumlar AS Y JOIN Uyeler AS U ON U.ID = Y.UyeID JOIN Makaleler AS M ON M.ID=Y.MakaleID";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Yorum y = new Yorum();
+                    y.ID = reader.GetInt32(0);
+                    y.UyeID = reader.GetInt32(1);
+                    y.Uye = reader.GetString(2);
+                    y.MakaleID = reader.GetInt32(3);
+                    y.Baslik = reader.GetString(4);
+                    y.Icerik = reader.GetString(5);
+                    y.Tarih = reader.GetDateTime(6);
+                    y.Durum = reader.GetBoolean(7);
+                    yorumlar.Add(y);
+                }
+                return yorumlar;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public List<Yorum> YorumListele(int Mid)
+        {
+            List<Yorum> yorumlar = new List<Yorum>();
+            try
+            {
+                cmd.CommandText = "SELECT Y.ID, Y.UyeID, U.KullaniciAdi, Y.MakaleID, M.Baslik, Y.Icerik, Y.YorumTarihi, Y.OnayDurum FROM Yorumlar AS Y JOIN Uyeler AS U ON U.ID = Y.UyeID JOIN Makaleler AS M ON M.ID=Y.MakaleID WHERE Y.MakaleID = @id AND Y.OnayDurum = 1";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", Mid);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Yorum y = new Yorum();
+                    y.ID = reader.GetInt32(0);
+                    y.UyeID = reader.GetInt32(1);
+                    y.Uye = reader.GetString(2);
+                    y.MakaleID = reader.GetInt32(3);
+                    y.Baslik = reader.GetString(4);
+                    y.Icerik = reader.GetString(5);
+                    y.Tarih = reader.GetDateTime(6);
+                    y.Durum = reader.GetBoolean(7);
+                    yorumlar.Add(y);
+                }
+                return yorumlar;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public List<Yorum> YorumListele(bool onay)
+        {
+            List<Yorum> yorumlar = new List<Yorum>();
+            try
+            {
+                cmd.CommandText = "SELECT Y.ID, Y.UyeID, U.KullaniciAdi, Y.MakaleID, M.Baslik, Y.Icerik, Y.YorumTarihi, Y.OnayDurum FROM Yorumlar AS Y JOIN Uyeler AS U ON U.ID = Y.UyeID JOIN Makaleler AS M ON M.ID=Y.MakaleID WHERE Y.OnayDurum = @d";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@d", onay);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Yorum y = new Yorum();
+                    y.ID = reader.GetInt32(0);
+                    y.UyeID = reader.GetInt32(1);
+                    y.Uye = reader.GetString(2);
+                    y.MakaleID = reader.GetInt32(3);
+                    y.Baslik = reader.GetString(4);
+                    y.Icerik = reader.GetString(5);
+                    y.Tarih = reader.GetDateTime(6);
+                    y.Durum = reader.GetBoolean(7);
+                    yorumlar.Add(y);
+                }
+                return yorumlar;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public bool YorumEkle(Yorum y)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO yorumlar(UyeID, MakaleID, Icerik, YorumTarihi, OnayDurum) VALUES(@uyeID, @makaleID,@icerik, @yorumTarihi, @onayDurum)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@uyeID", y.UyeID);
+                cmd.Parameters.AddWithValue("@makaleID", y.MakaleID);
+                cmd.Parameters.AddWithValue("@icerik", y.Icerik);
+                cmd.Parameters.AddWithValue("@yorumTarihi", y.Tarih);
+                cmd.Parameters.AddWithValue("@onayDurum", y.Durum);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
         #endregion
     }
